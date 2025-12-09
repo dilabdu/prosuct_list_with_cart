@@ -1,0 +1,173 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Rad Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+main {
+  flex-grow: 1;
+}
+
+img {
+  object-fit: cover;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  gap: 3.2rem;
+  width: 100%;
+  max-width: 1216px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.products-container {
+  width: 100%;
+  max-width: 800px;
+  margin-left: 1rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}
+
+.product__image {
+  max-width: 100%;
+  border-radius: 0.8rem;
+}
+
+.cart-btn__container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: -4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 100%;
+  max-width: 160px;
+  height: 44px;
+  border-radius: 999px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cart-btn {
+  border: 1px solid #ad8a85;
+  background-color: #ffffff;
+  color: #260f08;
+  /* display: none; */
+  justify-content: center;
+  margin-bottom: 1.6rem;
+}
+
+.cart-title {
+  font-weight: 400;
+  color: #87635a;
+  margin-bottom: 0.4rem;
+}
+
+.cart-description {
+  font-size: 1.6rem;
+  color: #260f08;
+  margin-bottom: 0.4rem;
+}
+
+.cart-price {
+  font-size: 1.6rem;
+  color: #c73b0f;
+}
+
+.cart-counter {
+  display: none;
+  gap: 4.55rem;
+  justify-content: space-between;
+  background-color: #c73b0f;
+  color: #ffffff;
+  border: none;
+}
+
+.increment {
+  margin-right: 1.2rem;
+}
+
+.decrement {
+  margin-left: 1.2rem;
+}
+
+.carts-container {
+  /* width: 100%;
+  max-width: 384px; */
+  border-radius: 1.2rem;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  
+}
+
+.buy-cart {
+}
+.buy-cart-template {
+}
+.buy-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #c73b0f;
+  padding: 2.4rem;
+}
+.about-cart {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem;
+}
+.buy-name {
+  color: #260f08;
+  margin-bottom: 0.8rem;
+}
+.buy-amount {
+  color: #c73b0f;
+  padding-right: 0.8rem;
+}
+.buy-price {
+  font-weight: 400;
+  color: #87635a;
+  margin-right: 0.8rem;
+}
+.total-price {
+  color: #87635a;
+}
+.icon {
+}
+.far {
+}
+.fa-times-circle {
+}

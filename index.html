@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prosuct_list_with_cart</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="products-container">
+        <h1 class="products-container__title">Desserts</h1>
+        <ul class="product-list" id="product-list">
+          <template id="product-template">
+            <li>
+              <img
+                class="product__image"
+                width="250px"
+                src="./public/images/image-baklava-desktop.jpg"
+                alt=""
+              />
+              <br />
+              <div class="cart-btn__container">
+                <button class="cart-btn btn">
+                  <img src="./public/images/icon-add-to-cart.svg" alt="Cart" />
+                  Add to cart
+                </button>
+                <div class="cart-counter__container">
+                  <button class="cart-counter btn">
+                    <img
+                      class="decrement"
+                      width="20px"
+                      src="./public/images/Add to Cart - Subtract Icon.png"
+                      alt="decrement"
+                    />
+
+                    <span>1</span>
+                    <img
+                      class="increment"
+                      width="20"
+                      src="./public/images/Add to Cart - Add Icon.png"
+                      alt="increment"
+                    />
+                  </button>
+                </div>
+              </div>
+              <br />
+              <div>
+                <p class="cart-title"></p>
+                <p class="cart-description"></p>
+                <span class="cart-price"></span>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </div>
+      <div class="carts-container">
+        <ul class="buy-cart">
+          <template class="buy-cart-template">
+            <h2 class="buy-title">Your Cart</h2>
+            <div class="about-cart">
+              <p class="buy-name"></p>
+              <span class="buy-amount"></span>
+              <span class="buy-price"></span>
+              <span class="total-price"></span>
+            </div>
+            <span class="icon">
+              <i class="far fa-times-circle"></i>
+            </span>
+          </template>
+        </ul>
+      </div>
+    </section>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
