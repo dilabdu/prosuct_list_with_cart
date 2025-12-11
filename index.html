@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>prosuct_list_with_cart</title>
+    <title>product_list_with_cart</title>
   </head>
   <body>
     <section class="wrapper">
       <div class="products-container">
-        <h1 class="products-container__title">Desserts</h1>
+        <h1 class="products_container__title">Desserts</h1>
         <ul class="product-list" id="product-list">
           <template id="product-template">
             <li>
@@ -21,52 +21,99 @@
               />
               <br />
               <div class="cart-btn__container">
-                <button class="cart-btn btn">
-                  <img src="./public/images/icon-add-to-cart.svg" alt="Cart" />
-                  Add to cart
+                <button class="product_btn product_add__btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 21 20"
+                  >
+                    <g fill="#C73B0F" clip-path="url(#a)">
+                      <path
+                        d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z"
+                      />
+                      <path
+                        d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M.333 0h20v20h-20z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Add to Cart
                 </button>
-                <div class="cart-counter__container">
-                  <button class="cart-counter btn">
-                    <img
-                      class="decrement"
-                      width="20px"
-                      src="./public/images/Add to Cart - Subtract Icon.png"
-                      alt="decrement"
-                    />
-
-                    <span>1</span>
-                    <img
-                      class="increment"
+                <div class="product_btn product_amount__btn">
+                  <button class="product_decrement btn">
+                    <svg
                       width="20"
-                      src="./public/images/Add to Cart - Add Icon.png"
-                      alt="increment"
-                    />
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5ZM10 1.25C5.1875 1.25 1.25 5.1875 1.25 10C1.25 14.8125 5.1875 18.75 10 18.75C14.8125 18.75 18.75 14.8125 18.75 10C18.75 5.1875 14.8125 1.25 10 1.25Z"
+                        fill="white"
+                      />
+                      <path d="M5 9.375H15V10.625H5V9.375Z" fill="white" />
+                    </svg>
+                  </button>
+                  <span class="product_amount">1</span>
+                  <button class="product_increment btn">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 2.5C14.125 2.5 17.5 5.875 17.5 10C17.5 14.125 14.125 17.5 10 17.5C5.875 17.5 2.5 14.125 2.5 10C2.5 5.875 5.875 2.5 10 2.5ZM10 1.25C5.1875 1.25 1.25 5.1875 1.25 10C1.25 14.8125 5.1875 18.75 10 18.75C14.8125 18.75 18.75 14.8125 18.75 10C18.75 5.1875 14.8125 1.25 10 1.25Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+                        fill="white"
+                      />
+                    </svg>
                   </button>
                 </div>
               </div>
-              <br />
-              <div>
+              <div class="product_info">
                 <p class="cart-title"></p>
                 <p class="cart-description"></p>
-                <span class="cart-price"></span>
+                <p class="cart-price"></p>
               </div>
             </li>
           </template>
         </ul>
       </div>
-      <div class="carts-container">
-        <ul class="buy-cart">
-          <template class="buy-cart-template">
-            <h2 class="buy-title">Your Cart</h2>
-            <div class="about-cart">
-              <p class="buy-name"></p>
-              <span class="buy-amount"></span>
-              <span class="buy-price"></span>
-              <span class="total-price"></span>
-            </div>
-            <span class="icon">
-              <i class="far fa-times-circle"></i>
-            </span>
+      <div class="cart_container">
+        <h2 class="cart_title">Your Cart <span class="cart_title__amount">(0)</span></h2>
+        <div class="cart_empty">
+          <img
+            class="cart_empty__image"
+            src="./public/images/illustration-empty-cart.svg"
+            alt=""
+          />
+          <p class="cart_empty__text">Your added items will appear here</p>
+        </div>
+        <ul class="cart_product__list" id="cart_product__list">
+          <template id="cart_product__template">
+            <li class="cart_product__item">
+              <div class="cart_product__info">
+                <h4 class="cart_product__title">Classic Tiramisu</h4>
+                <div class="cart_product__numbers">
+                  <p class="cart_product__amount">1x</p>
+                  <p class="cart_product__price">@$7.00</p>
+                  <p class="cart_product__total">$28.00</p>
+                </div>
+              </div>
+              <button class="cart_product__delete">x</button>
+            </li>
           </template>
         </ul>
       </div>

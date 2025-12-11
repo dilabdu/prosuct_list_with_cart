@@ -17,6 +17,13 @@ a {
   display: inline-block;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
 ul,
 ol {
   list-style: none;
@@ -26,6 +33,7 @@ body {
   font-family: "Rad Hat Display", sans-serif;
   font-weight: 600;
   font-size: 1.4rem;
+  background-color: #fcf8f6;
 }
 main {
   flex-grow: 1;
@@ -37,12 +45,15 @@ img {
 }
 
 .wrapper {
+  align-items: flex-start;
   display: flex;
   gap: 3.2rem;
   width: 100%;
-  max-width: 1216px;
+  max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 8.8rem;
+  padding-bottom: 8.8rem;
 }
 
 .products-container {
@@ -50,7 +61,12 @@ img {
   max-width: 800px;
   margin-left: 1rem;
 }
-
+.products_container__title {
+  margin-bottom: 3.2rem;
+  color: #260f08;
+  font-size: 5.6rem;
+  line-height: 1.2;
+}
 .product-list {
   display: flex;
   flex-wrap: wrap;
@@ -60,8 +76,9 @@ img {
 .product__image {
   max-width: 100%;
   border-radius: 0.8rem;
+  border: 2px solid transparent;
+  transition: 0.3s;
 }
-
 .cart-btn__container {
   width: 100%;
   max-width: 400px;
@@ -71,24 +88,67 @@ img {
   align-items: center;
 }
 
-.btn {
-  width: 100%;
-  max-width: 160px;
-  height: 44px;
-  border-radius: 999px;
-  text-align: center;
+.product_btn {
+  width: 160px;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
   display: flex;
+  justify-content: center;
   align-items: center;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  height: 44px;
+  margin-top: -2, 2rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.product_add__btn {
+  cursor: pointer;
+  border-color: #ad8a85;
   gap: 0.8rem;
 }
 
-.cart-btn {
-  border: 1px solid #ad8a85;
-  background-color: #ffffff;
-  color: #260f08;
-  /* display: none; */
-  justify-content: center;
-  margin-bottom: 1.6rem;
+.product_add__btn:hover {
+  color: #c73b0f;
+  border-color: #c73b0f;
+}
+
+.product_amount__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  background-color: #c73b0f;
+  color: #ffffff;
+  display: none;
+}
+
+.product_decrement {
+  background-color: inherit;
+  display: flex;
+  cursor: pointer;
+}
+
+
+
+.product_increment {
+  background-color: inherit;
+  display: flex;
+  cursor: pointer;
+}
+
+.product_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .cart-title {
@@ -108,66 +168,60 @@ img {
   color: #c73b0f;
 }
 
-.cart-counter {
-  display: none;
-  gap: 4.55rem;
-  justify-content: space-between;
-  background-color: #c73b0f;
-  color: #ffffff;
-  border: none;
-}
 
-.increment {
-  margin-right: 1.2rem;
-}
-
-.decrement {
-  margin-left: 1.2rem;
-}
-
-.carts-container {
-  /* width: 100%;
-  max-width: 384px; */
+.cart_container {
+  padding: 2.4rem;
   border-radius: 1.2rem;
-  gap: 2.4rem;
-  padding: 2.4rem;
-  
+  background-color: #ffffff;
+}
+.cart_title {
+  margin-bottom: 2.4rem;
+  color: #c73b0f;
+}
+.cart_empty {
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+display: none;
+}
+.cart_empty__image {
+  width: 128px;
+  height: 128px;
+}
+.cart_empty__text {
+  color: #87635a;
 }
 
-.buy-cart {
-}
-.buy-cart-template {
-}
-.buy-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #c73b0f;
-  padding: 2.4rem;
-}
-.about-cart {
+.cart_product__item {
+  width: 384px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 2.4rem;
+  border-bottom: 1px solid#f5eeec;
+  padding-bottom: 1.6rem;
+  padding-top: 1.6rem;
 }
-.buy-name {
-  color: #260f08;
+.cart_product__numbers {
+  gap: 0.8rem;
+  display: flex;
   margin-bottom: 0.8rem;
 }
-.buy-amount {
+.cart_product__amount {
   color: #c73b0f;
-  padding-right: 0.8rem;
 }
-.buy-price {
+.cart_product__price {
+  color: #87635a;
   font-weight: 400;
-  color: #87635a;
-  margin-right: 0.8rem;
 }
-.total-price {
+.cart_product__total {
   color: #87635a;
 }
-.icon {
-}
-.far {
-}
-.fa-times-circle {
+.cart_product__delete {
+  width: 20px;
+  height: 20px;
+  color: #ad8a85;
+  border: 1px solid #ad8a85;
+  border-radius: 50%;
 }
